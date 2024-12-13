@@ -1,0 +1,277 @@
+/* Variables globales */
+:root {
+    --color-auto: #28a745;
+    --color-moto: aqua;
+    --color-ocupado: #dc3545;
+    --color-fondo: #666;
+    --color-texto: #fff;
+    --tamaño-espacio: 80px;
+  }
+  
+  /* Contenedor principal */
+  main {
+    position: relative;
+    background-color: transparent;
+    min-height: 100vh;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  /* Responsividad: Ajustes para pantallas pequeñas */
+  @media (max-width: 768px) {
+    main {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  
+  /* Contenedor del formulario */
+  .formulario-container {
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    color: #000000;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Título del formulario */
+  .formulario-container h2 {
+    text-align: center;
+    color: #666;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Etiquetas del formulario */
+  .formulario-container label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #999;
+    text-align: left;
+  }
+  
+  /* Campos del formulario */
+  .formulario-container input,
+  .formulario-container select {
+    width: 100%;
+    padding: 0.7rem;
+    margin-bottom: 0.7rem;
+    border: none;
+    box-shadow: 0 0 10px #abdb25;
+    font-size: 0.9rem;
+  }
+
+  /* Interacción en campos */
+  .formulario-container input:focus,
+  .formulario-container{
+    outline: none;
+    border-bottom: 2px solid #92be20;
+  }
+
+  .formulario-container{
+    border: none;
+  }
+  
+  /* Botón de reserva */
+  #btnReservar {
+    width: 100%;
+    padding: 0.6rem;
+    color: #000000;
+    background-color: #abdb25;
+    border: none;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: normal;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #btnReservar:hover {
+    background-color: #92be20;
+  }
+  
+  #btnReservar:active {
+    background-color: #789617;
+  }
+  
+  /* Responsividad: Formulario en pantallas pequeñas */
+  @media (max-width: 480px) {
+    .formulario-container {
+      width: 80%;
+      padding: 1rem;
+    }
+    .formulario-container input,
+    .formulario-container select,
+    #btnReservar {
+      font-size: 0.85rem;
+      padding: 0.5rem;
+    }
+  }
+  
+  /* Estilos del mapa de estacionamiento */
+  #parking-lot {
+    display: grid;
+    grid-template-columns: repeat(9, var(--tamaño-espacio));
+    grid-template-rows: repeat(7, var(--tamaño-espacio));
+    gap: 10px;
+    background-color: var(--color-fondo);
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+  }
+  
+  /* Espacios de estacionamiento */
+  .parking-space, .bike-parking {
+    width: var(--tamaño-espacio);
+    height: var(--tamaño-espacio);
+    background-color: var(--color-auto);
+    border: 2px solid #fff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .parking-space:hover {
+    transform: scale(1.05);
+    background-color: #51cf66;
+  }
+  
+  .bike-parking {
+    background-color: var(--color-moto);
+  }
+  
+  .empty-space {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: var(--color-texto);
+  }
+  
+  /* Estados de los espacios */
+  .available {
+    background-color: #ffffff;
+  }
+  
+  .occupied {
+    background-color: var(--color-ocupado);
+    color: #ffffff;
+  }
+  
+  .selected {
+    background-color: #51cf66;
+    color: #ffffff;
+  }
+  
+  .disabled {
+    background-color: #4dabf7;
+    color: #ffffff;
+  }
+  
+  /* Responsividad: Mapa en pantallas pequeñas */
+  @media (max-width: 768px) {
+    #parking-lot {
+      grid-template-columns: repeat(9, 60px);
+      grid-template-rows: repeat(7, 60px);
+      gap: 8px;
+      padding: 8px;
+    }
+    .parking-space, .bike-parking {
+      width: 60px;
+      height: 60px;
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #parking-lot {
+      grid-template-columns: repeat(9, 50px);
+      grid-template-rows: repeat(7, 50px);
+      gap: 5px;
+      padding: 5px;
+    }
+    .parking-space, .bike-parking {
+      width: 50px;
+      height: 50px;
+      font-size: 12px;
+    }
+  }
+/* Responsividad: Ajustes para pantallas de 800px hacia arriba */
+@media (min-width: 800px) and (max-width: 1200px) {
+  main {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .formulario-container {
+    max-width: 450px;
+    padding: 1.5rem;
+  }
+
+  .formulario-container input,
+  .formulario-container select,
+  #btnReservar {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  #parking-lot {
+    grid-template-columns: repeat(9, var(--tamaño-espacio));
+    grid-template-rows: repeat(7, var(--tamaño-espacio));
+    gap: 10px;
+  }
+
+  .parking-space, .bike-parking {
+    width: var(--tamaño-espacio);
+    height: var(--tamaño-espacio);
+    font-size: 16px;
+  }
+}
+
+/* Ajustes específicos para pantallas más grandes o con mayor resolución */
+@media (min-width: 1201px) {
+  main {
+    gap: 30px;
+  }
+
+  .formulario-container {
+    max-width: 500px;
+    padding: 2rem;
+  }
+
+  .formulario-container input,
+  .formulario-container select,
+  #btnReservar {
+    font-size: 1.1rem;
+    padding: 0.8rem;
+  }
+
+  #parking-lot {
+    grid-template-columns: repeat(9, var(--tamaño-espacio));
+    grid-template-rows: repeat(7, var(--tamaño-espacio));
+    gap: 12px;
+  }
+
+  .parking-space, .bike-parking {
+    width: var(--tamaño-espacio);
+    height: var(--tamaño-espacio);
+    font-size: 18px;
+  }
+}
+
+.Listado {  
+  color:black !important
+  }

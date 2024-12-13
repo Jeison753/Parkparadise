@@ -1,0 +1,170 @@
+.miclase{
+    display: flex; /* Para habilitar align-items y justify-content */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    text-align: center; /* Centra el texto dentro del elemento */
+    position: absolute; /* Posición absoluta para centrar en la pantalla */
+    top: 5%; /* Posiciona en el medio verticalmente */
+    left: 59.1%; /* Posiciona en el medio horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta el punto de referencia al centro */
+    padding: 10px 4px; /* Espaciado interno */
+    width: 500px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    background-color: #abdb25;
+    border-radius: 20px;
+    opacity: 1;
+    transition: opacity 1s ease; /* Animación de transición */
+    z-index: 9999; /* Asegura que esté por encima de otros elementos */
+}
+
+.miclase2{
+    display: flex; /* Para habilitar align-items y justify-content */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    text-align: center; /* Centra el texto dentro del elemento */
+    position: absolute; /* Posición absoluta para centrar en la pantalla */
+    top: 3%; /* Posiciona en el medio verticalmente */
+    left: 50%; /* Posiciona en el medio horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta el punto de referencia al centro */
+    padding: 10px 10px; /* Espaciado interno */
+    width: 500px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    background-color: red;
+    border-radius: 20px;
+    opacity: 1;
+    transition: opacity 1s ease;
+    z-index: 9999; /* Asegura que esté por encima de otros elementos */
+}
+
+.oculto{
+    opacity: 0;
+}
+
+
+
+
+
+/* CONFIGURACION */    
+
+.container {
+    position: relative;
+    z-index: 10;
+    max-width: 440px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px #999999;
+}
+
+.container h2 {
+    font-size: 36px;
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #999999;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select:focus {
+    border-color: #abdb25;
+    transition: border-color 0.3s ease;
+    outline: none;
+    box-shadow: 0 0 10px #abdb25;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    resize: none;
+}
+
+.form-group input[type="file"] {
+    border: none;
+}
+
+.form-group button {
+    width: 100%;
+    padding: 10px;
+    background-color: #abdb25;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background-color: #8eb620;
+    transition: background-color 0.5s ease;
+    box-shadow: 0 0 10px #8eb620;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 400px) {
+    .container {
+        max-width: 100%;
+        padding: 10px;
+        box-shadow: none;
+    }
+
+    .container h2 {
+        font-size: 24px;
+    }
+}
+
+/* modal */
+/* Estilos generales para el modal */
+.modal {
+    display: none; /* Ocultar el modal por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Asegurar que quede por encima de otros elementos */
+  }
+  
+  .modal-contenido {
+    background-color: #fff; /* Fondo blanco */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+  }
+  
+  button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #abdb25;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #83a81d;
+  }
+  
+  

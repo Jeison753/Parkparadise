@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/stylePrincipal.css">
+    <link rel="stylesheet" href="/CSS/stylePerfil.css">
+    <title>perfil</title>
+</head>
+<body>
+    <div class="menu">
+        <img src="/assets/menu.png">
+        <img src="/assets/ocultar.png">
+    </div>
+
+    <div class="barraLateral">
+
+        <div>
+            <div class="nombrePagina">
+                <img src="/assets/iconLogoParadise.ico" alt="imagen" class="imagen" id="icon">
+                <span>PARKPARADISE</span>
+                
+            </div>
+            
+        </div>
+        <span class="nombreUsu" id="nombreUsu"></span>
+
+        <div>
+            <nav class="navegacion">
+                <li>
+                    <a href="/HTML/index.html" id="Inicio">
+                        <img src="/assets/Inicio.png">
+                        <span>INICIO</span>
+                    </a>
+                </li>
+                    <li>
+                        <a href="/HTML/perfil.html">
+                            <img src="/assets/sesion.png">
+                            <span>PERFIL</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/HTML/configuracion.html">
+                            <img src="/assets/Configuracion.png">
+                            <span>CONFIGURACION</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/HTML/reserva.php">
+                            <img src="/assets/Reserva.png">
+                            <span>RESERVA</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/PHP/facturacion.php">
+                            <img src="/assets/Facturacion.png">
+                            <span>FACTURACION</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/PHP/historialUsuario.php">
+                            <img src="/assets/historialpk.png">
+                            <span>HISTORIAL</span>
+                        </a>
+                    </li>
+                    <li>
+                        
+                        <a>
+                            <img src="/assets/Cerrar Sesion.png">
+                            <span id="CerrarSesion">CERRAR SESION</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/HTML/ayuda.html">
+                            <img src="/assets/Ayuda.png" >
+                            <span>AYUDA</span>
+                        </a>
+                    </li>
+            </nav>
+        </div>
+    
+        <div></div>
+                
+        </div>
+    
+    <main>
+        <div class="container">
+            <h2>USUARIO</h2>
+            <form>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="correo" name="correo" readonly>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="document">Número de Documento</label>
+                        <input type="text" id="documento" name="documento" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" readonly>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="role">Rol</label>
+                        <input type="text" id="rol" name="rol" readonly>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="button" onclick="location.href='/HTML/configuracion.html'">Editar Perfil</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Modal de confirmación de Cerrar Sesión -->
+    <div id="miModalCerrarSesion" style="display: none;" class="cerrar">
+        <div class="modalContent">
+            <p id="mensajeModalCerrarSesion">¿Seguro que quieres cerrar sesión?</p>
+            <button id="cerrarModalCerrarSesion">Aceptar</button>
+            <button id="cancelarModalCerrarSesion">Cancelar</button>
+        </div>
+    </div>
+    
+    
+
+    <script src="/JavaScript/script.js"></script>
+    <script src="/JavaScript/scriptPerfil.js"></script>
+    <script src="/JavaScript/scriptIndex.js"></script>
+    
+</body>
+</html>

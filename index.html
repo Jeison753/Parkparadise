@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Inicio de sesión</title>
+   <link rel="stylesheet" href="/CSS/Styles.css">
+   <link rel="stylesheet" href="/CSS/styleSesion.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap">
+</head>
+
+<body>
+   <div id="customAlert" class="alert-overlay">
+      <div class="alert-box">
+          <p id="alertMessage">Este es un mensaje de alerta.</p>
+      </div>
+  </div>
+  
+   <div class="container">
+      <div class="wrapper">
+         <div class="card-switch">
+            <label class="switch">
+               <input type="checkbox" class="toggle">
+               <span class="slider"></span>
+               <span class="card-side"></span>
+               <div class="flip-card__inner">
+                  <!-- Login Form -->
+                  <div class="flip-card__front">
+                     <div class="title">Iniciar Sesión</div>
+                     <form class="flip-card__form">
+                        <input class="flip-card__input" id="correo" name="correo" placeholder="ingrese su correo" type="email" required>
+                        <span id="errorCorreo"></span>
+                        <input class="flip-card__input" id="contrasena" name="contrasena" placeholder="ingrese su contraseña" type="password" required>
+                        <span id="errorContrasena"></span>
+                        <button class="flip-card__btn" type="button" id="btnIniciar">Iniciar Sesión</button>
+                        <a href="/PHP/RecuperarContrasena.php">¿Olvidaste Tu Contraseña?</a>
+                     </form>
+                  </div>
+                  <!-- Register Form -->
+                  <div class="flip-card__back">
+                     <div class="title">Registrarse</div>
+                     <form class="flip-card__formRe">
+                        <input class="flip-card__input" id="nombre" name="nombre" placeholder="Nombre" type="text" required>
+                        <span id="errorNombre"></span>
+                        <input class="flip-card__input" id="telefono" name="telefono" placeholder="telefono" type="number" required>
+                        <span id="errorTelefono"></span>
+                        <input class="flip-card__input" id="correoRe" name="correoRe" placeholder="Email" type="email" required>
+                        <span id="errorCorreoRe"></span>
+                        <input class="flip-card__input" id="documento" placeholder="documento" type="number" required>
+                        <span id="errorDocumento"></span>
+                        <input class="flip-card__input" id="contrasenaRe" placeholder="Contraseña" type="password" required>
+                        <span id="errorContrasenaRe"></span>
+                        <button class="flip-card__btn" type="button" id="btnRegistrar">Registrarse</button>
+                     </form>
+                  </div>
+               </div>
+            </label>
+         </div>
+      </div>
+   </div>
+   
+   <div id="miModalRegistro" style="display: none;">
+      <div class="modalContent">
+          <p id="mensajeModalRegistro">Usuario registrado exitosamente</p>
+          <button id="cerrarModalRegistro">Aceptar</button>
+      </div>
+  </div>
+
+
+   <script src="/JavaScript/scriptRegistro.js"></script>
+   <script src="/JavaScript/scriptsesion.js"></script>
+
+</body>
+
+</html>

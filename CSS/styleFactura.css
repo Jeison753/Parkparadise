@@ -1,0 +1,233 @@
+/* Estilo para la factura */
+.factura-container {
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-sizing: border-box;
+    z-index: 10;
+    position: relative;
+}
+
+h5{
+    position: relative;
+    text-align: center;    
+    color: white;
+    margin-top: 10%;
+    font-size: 20px;
+}
+
+h1 {
+    color: #abdb25;
+    text-align: center;
+    font-size: 28px;
+}
+
+.factura-info {
+    margin-top: 20px;
+}
+
+.factura-header {
+    background-color: #cccccc;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.factura-header h2 {
+    color: #000000;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.factura-header p {
+    font-size: 16px;
+    color: #555;
+}
+
+.reserva-item {
+    position: relative;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.reserva-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/assets/LogoParadiseBlack.png);
+    background-repeat: repeat-y;
+    background-size: 50%;
+    background-position: top center;
+    opacity: 0.2;  
+    z-index: -1;  
+}
+
+
+.reserva-item p {
+    font-size: 14px;  /* Ajusta el tamaño de la fuente si es necesario */
+}
+
+.reserva-item hr {
+    border: 1px solid #ccc;  /* Personaliza el estilo del separador */
+}
+
+
+.reservas img{
+    display: none;
+}
+
+.reservas h3 {
+    font-size: 22px;
+    margin-top: 30px;
+    text-decoration: underline;
+
+}
+
+.reserva-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.reserva-item p {
+    font-size: 16px;
+    color: #000000;
+    
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #abdb25;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #799c1a;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+/* responsive */
+
+@media (max-width: 768px) {
+   .factura-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .factura-header {
+        margin-bottom: 10px;
+    }
+
+    .reserva-item::before {
+        position: absolute; /* Asegura que la imagen se pueda colocar en relación a este contenedor */
+        background-image: url(/assets/LogoParadiseBlack.png); /* Ruta de tu imagen */
+        background-size: contain; /* Ajusta la imagen para que se vea dentro del contenedor */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        background-position: center center; /* Centra la imagen en el contenedor */
+    }
+
+    .reservas img {
+        display: none;
+    }
+
+    .reservas h3 {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+}
+
+/* Estilos para la impresión */
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .factura-container {
+        width: 100%;
+        padding: 30px;
+        margin: 0;
+        border: none;
+    }
+
+    .reservas img {
+        display: inline;
+        width: 100%;                 /* Ajusta el tamaño de la imagen */
+        height: auto;                /* Ajusta el tamaño de la imagen */
+        position: absolute;         /* Posicionamiento absoluto */
+        top: 39%;                   /* Coloca la imagen en la mitad vertical */
+        left: 50%;                  /* Coloca la imagen en la mitad horizontal */
+        transform: translate(-50%, -50%); /* Ajuste para centrar la imagen exactamente */
+        z-index: -1;                /* Coloca la imagen detrás del contenido */
+        opacity: 0.2;               /* Opcional: hace la imagen un poco transparente para que el texto sea más legible */
+    }
+
+    h1 {
+        font-size: 30px;
+        text-align: center;
+        color: #666666;
+    }
+
+    .factura-header {
+        margin-bottom: 20px;
+    }
+
+    .factura-container img{
+        width: 100%;
+        height: auto;
+        z-index: 10;
+    }
+
+    .reservas h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .reserva-item {
+        page-break-inside: avoid; /* Evita que el contenido de la reserva se divida entre páginas */
+        padding: 20px;
+        margin-bottom: 20px;
+        background: #fff; /* Fondo blanco para cada reserva */
+    }
+
+    .factura-info p {
+        font-size: 18px;
+    }
+
+    .menu img{
+        display: none;
+    }
+
+    button {
+        display: none; /* Ocultar botón de impresión durante la impresión */
+    }
+
+    hr {
+        border-top: 2px solid #ddd;
+    }
+}

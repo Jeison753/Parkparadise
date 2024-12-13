@@ -1,0 +1,45 @@
+/* Estilo común para ambas alertas */
+.ErrorAlert, .SucessAlert {
+  display: flex; /* Para habilitar align-items y justify-content */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  text-align: center; /* Centra el texto dentro del elemento */
+  position: fixed; /* Posición absoluta para centrar en la pantalla */
+  top: 3%; /* Posiciona en el medio verticalmente */
+  left: 50%; /* Posiciona en el medio horizontalmente */
+  transform: translate(-50%, -50%); /* Ajusta el punto de referencia al centro */
+  padding: 10px 4px; /* Espaciado interno */
+  width: 500px;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 20px;
+  opacity: 1;
+  z-index: 100; /* Asegura que el mensaje se mantenga visible */
+}
+
+/* Estilos específicos para la alerta de error */
+.ErrorAlert {
+  background-color: red;
+  transition: opacity 1.2s ease; /* Animación de transición */
+}
+
+/* Estilos específicos para la alerta de éxito */
+.SucessAlert {
+  background-color: #abdb25;
+  transition: opacity 2s ease;
+}
+
+/* Consultas de medios para pantallas pequeñas */
+@media (max-width: 768px) {
+  .ErrorAlert, .SucessAlert {
+    width: 90%; /* Reduce el ancho al 90% en pantallas pequeñas */
+    padding: 10px 20px; /* Aumenta el padding en móviles */
+  }
+}
+
+@media (max-width: 480px) {
+  .ErrorAlert, .SucessAlert {
+    width: 95%; /* Reduce aún más el ancho en pantallas muy pequeñas */
+    padding: 10px 20px; /* Mantiene el padding en pantallas muy pequeñas */
+  }
+}
